@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import home 
+from .views import show_recipes_without_product 
 urlpatterns = [
-    path("", home, name="home")
+    path("<int:product_id>", show_recipes_without_product, name="home")
 ]
 
 
